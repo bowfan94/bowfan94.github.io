@@ -4,9 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    
     <title>Bowen Fan | Research Projects</title>
     <style>
-        \header {
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px; /* Example size */
+            color: #333; /* Default text color, adjust as needed */
+        }
+        
+        .highlight {
+            color: #007BFF; /* Example blue color */
+            font-weight: bold; /* If you want the name to be bold */
+        }
+        header {
             margin-bottom: 1; /* Adjust this value as needed */
         }
         main.container {
@@ -35,6 +46,30 @@
             margin-bottom: 10px; /* Adds space between the title and the image */
             cursor: pointer; /* Indicates that the element is clickable */
         }
+        
+        .project {
+            background-color: #ffffff;  /* Light background for the project */
+            border: 1px solid #e1e1e1;  /* Subtle border for definition */
+            margin-bottom: 2rem;  /* Space between projects */
+            overflow: hidden;  /* Ensures no overflow from child elements */
+            border-radius: 8px;  /* Rounded corners for aesthetics */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);  /* Soft shadow for depth */
+            transition: box-shadow 0.3s ease-in-out;  /* Smooth transition for hover effects */
+        }
+
+        .project:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);  /* Enhanced shadow on hover for interactivity */
+        }
+        
+        .project-title, .project-description {
+            padding: 20px;  /* Uniform padding within each section */
+        }
+
+        .project-image {
+            width: 100%;
+            display: block;  /* Ensures image takes full width of its container */
+            height: auto;  /* Maintains aspect ratio */
+        }
     </style>
 </head>
 <body>
@@ -52,13 +87,52 @@
     <main class="container">
         <h2>Selected Research Projects</h2>
         <section class="project" onclick="toggleDescription(this)">
-            <h3 class="project-title"><strong>Persistent Complement Dysregulation with Signs of Thromboinflammation in Active Long Covid</strong></h3>
+            <h3 class="project-title"><strong>Persistent complement dysregulation with signs of thromboinflammation in active Long Covid</strong></h3>
             <img class="project-image" src="https://bowfan94.github.io/files/Projects/Long COVID/overview.jpg" alt="Persistent complement dysregulation with signs of thromboinflammation in active Long Covid">
             <div class="project-description">
                 <p>In the study, we analyzed into the serum proteome of COVID-19 patients up to twelve months post-infection, revealing persistent complement system activation and thromboinflammation. We discovered that terminal complement complex formation was altered, with an increased presence of the C5bC6 complex and a decrease in C7 incorporation, which is essential for cell membrane integration. A prominent thromboinflammatory response, marked by elevated von Willebrand factor and diminished antithrombin III levels, was also linked to the clinical persistence of Long Covid symptoms.</p>
                 <p>Importantly, this research employed machine learning techniques to analyze the vast dataset of over 6500 protein expressiong levels, enabling the identification of key biomarkers and mechanistic insights into Long Covid. The use of machine learning not only enhanced the precision of the biomarker identification process but also allowed for the quantification of complex interrelations between different proteins and pathways involved in the disease process. This approach provided a robust basis for the development of targeted diagnostic tools and therapeutic interventions aimed at addressing the ongoing immune and coagulation abnormalities associated with Long Covid. The integration of advanced computational tools like machine learning thus significantly contributed to our understanding of Long Covid’s underlying biological mechanisms and offered promising directions for future research and treatment strategies.</p>
             </div>
         </section>
+        
+        <section class="project" onclick="toggleDescription(this)">
+            <h3 class="project-title"><strong>Detecting genetic interactions with visible neural networks</strong></h3>
+            <img class="project-image" src="https://bowfan94.github.io/files/Projects/NN interactions/overview.png" alt="Detecting Genetic Interactions with Visible Neural Networks">
+            <div class="project-description">
+                <p>In this work, we investigated the detection of genetic interactions using visible neural networks tailored for understanding complex non-linear interactions among genes and SNPs. This study highlights the advancement of machine learning, particularly neural networks, in genetics, where they are instrumental due to their capacity to manage large datasets and model intricate biological interactions. The research utilizes visible neural networks, which incorporate prior biological knowledge to enhance the interpretability of genetic predictions, demonstrating significant advancements in the detection of genetic interactions crucial for understanding diseases like inflammatory bowel disease.</p>
+                <p>The methodology applied includes various post-hoc interpretation techniques to extract meaningful interactions from the trained neural networks. These interpretations have shown that neural networks can uncover significant genetic interactions, which are often complex and not readily detectable using traditional statistical methods. By integrating machine learning with genetics, this research not only advances our understanding of genetic underpinnings in diseases but also opens up new avenues for the application of artificial intelligence in biomedical research, emphasizing the role of machine learning as a transformative tool in genetic studies.</p>
+            </div>
+        </section>
+        
+        <section class="project" onclick="toggleDescription(this)">
+            <h3 class="project-title"><strong>Data-driven analysis of amplification bias in multi-template PCR via interpretable deep learning</strong></h3>
+            <img class="project-image" src="https://bowfan94.github.io/files/Projects/PCR bias/overview.png" alt="Persistent complement dysregulation with signs of thromboinflammation in active Long Covid">
+            <div class="project-description">
+                <p>In this work discusses the challenges and innovations in addressing amplification biases that arise during multi-template Polymerase Chain Reaction (PCR), particularly within high-throughput sequencing. The study highlights the vital role of deep learning in identifying and analyzing the nuances of DNA sequences that contribute to these biases. By applying deep learning techniques, the research enhances the understanding of sequence-dependent amplification biases and introduces a novel approach for predicting sequences that are likely to amplify poorly. This is particularly significant in applications like DNA data storage, where precision in sequence replication is crucial.</p>
+                <p>Further, the paper explores the impact of specific DNA sequence motifs on amplification efficiency. Deep learning models were trained to identify motifs associated with low amplification efficiency, which were then verified through experimental approaches. The study underscores the transformational impact of machine learning in genomic research, providing a robust framework for reducing biases in PCR applications. The application of such advanced analytical techniques is instrumental in refining the accuracy of genetic analyses and holds promise for improving the reliability of genomic data across various scientific disciplines. This not only enhances the predictive capabilities of bioinformatics tools but also opens new avenues for genomic research where accurate replication of sequences is paramount.</p>
+            </div>
+        </section>
+        
+        <section class="project" onclick="toggleDescription(this)">
+            <h3 class="project-title"><strong>An empirical study on KDIGO-defined acute kidney injury prediction in the intensive care unit
+</strong></h3>
+            <img class="project-image" src="https://bowfan94.github.io/files/Projects/AKI/overview.png" alt="An Empirical Study on KDIGO-Defined Acute Kidney Injury Prediction in the Intensive Care Unit">
+            <div class="project-description">
+                <p>In this work, we addressed the significant challenge of early and accurate prediction of acute kidney injury (AKI) in ICU settings. The study underscores the inadequacy of traditional AKI prediction models that solely rely on creatinine levels, which may delay the detection due to the lagging nature of serum creatinine changes post kidney injury. By integrating both creatinine and urine output into the KDIGO definition, the research presents a more effective model using gradient-boosted decision trees (GBDT) enhanced by a novel time-stacking method, which significantly outperforms the existing LSTM models in terms of precision and reduced false alarms.</p>
+                <p>Moreover, the paper highlights the versatility of the GBDT model in handling diverse ICU data across different systems and demographics, ensuring that the predictive model performs robustly regardless of the patient cohort specifics. This research is pivotal as it not only improves the predictive accuracy of AKI, which is critical for timely intervention, but also contributes to better resource allocation and patient management in ICUs. The implementation of such advanced machine learning techniques in clinical settings could lead to substantial improvements in patient outcomes by providing caregivers with more reliable tools for early detection and treatment strategies.</p>
+            </div>
+        </section>
+        
+        <section class="project" onclick="toggleDescription(this)">
+            <h3 class="project-title"><strong>Unsupervised manifold alignment with joint multidimensional scaling</strong></h3>
+            <img class="project-image" src="https://bowfan94.github.io/files/Projects/Joint MDS/overview.png" alt="Unsupervised manifold alignment with joint multidimensional scaling">
+            <div class="project-description">
+                <p>We introduced an innovative method to tackle the problem of manifold alignment in unsupervised settings. The approach, known as Joint Multidimensional Scaling (Joint MDS), is designed to map data from two distinct domains into a common low-dimensional Euclidean space without prior knowledge of correspondences between the datasets. This is achieved by integrating multidimensional scaling (MDS) with Wasserstein Procrustes analysis into a joint optimization framework, allowing for the simultaneous embedding of data and learning of instance correspondences based solely on intra-dataset dissimilarities. This method is particularly useful in situations where traditional feature-based approaches cannot be applied, such as with datasets lacking explicit input features.</p>
+                <p>The paper demonstrates the effectiveness of Joint MDS across several applications including joint dataset visualization, unsupervised heterogeneous domain adaptation, graph matching, and protein structure alignment, proving its versatility and robustness. The unsupervised nature of this approach and its reliance on intra-dataset dissimilarities make it a powerful tool for analyzing complex datasets from different domains. The ability to perform these tasks without the need for supervised training data or known correspondences is a significant advancement, showcasing the potential of Joint MDS in facilitating deeper insights and better data integration in fields such as bioinformatics and machine learning.</p>
+            </div>
+        </section>
+        
+        
     </main>
     <footer class="container">
         <small>© 2024 Bowen Fan</small>
