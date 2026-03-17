@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bowen Fan – Selected Research Projects">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Bowen Fan | Research</title>
+</head>
+<body>
+  <header>
+    <nav class="container">
+      <a class="nav-brand" href="index.html">bowen<span>.fan</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="research.html" class="active">Research</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="skills.html">Skills</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">Selected Research Projects</h2>
+    <p class="section-subtitle">Click a card to expand the project description.</p>
+
+    <!-- ── AI Tumor Board (Flagship) ── -->
+    <section class="project-card" onclick="toggleCard(this)" style="border: 2px solid #2563eb;">
+      <div class="project-card-header">
+        <div style="display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; margin-bottom:8px;">
+          <span class="badge badge-review">Under Review</span>
+        </div>
+        <h3 class="project-card-title">AI Tumor Board: An Agentic AI Framework for Precision Oncology Decision Support</h3>
+      </div>
+      <div class="project-card-image">
+        <img src="files/Projects/AI Tumor Board/overview.svg" alt="AI Tumor Board framework overview: guideline alignment, predictive models, and interactive dashboard">
+      </div>
+      <div class="expand-hint">&#9662; click to expand</div>
+      <div class="project-card-body">
+        <p>The <strong>AI Tumor Board</strong> is a multi-institution research program (USZ, KISPI, UZH) that I co-manage as part of my postdoctoral work at the <a href="https://krauthammerlab.ch/" target="_blank" onclick="event.stopPropagation();">Krauthammer Lab</a>. The project aims to develop and clinically evaluate an AI-driven platform for precision oncology that provides oncologists with both evidence-based and data-driven treatment decision support for adult and pediatric cancer patients.</p>
+
+        <p>Cancer treatment decisions fall into two scenarios: <strong>standard of care</strong> (guided by clinical guidelines) and <strong>beyond standard of care</strong> (where trial evidence is absent and treatment becomes increasingly individualized). Most cancer patients eventually progress to the latter, making AI-powered solutions critical for complementing guideline-based treatment. The AI Tumor Board framework addresses both settings through three integrated work packages:</p>
+
+        <h4>WP1 &mdash; Guideline-Driven Decision Support (Standard of Care)</h4>
+        <p>We leverage <strong>Large Language Models</strong> (including Meditron and RAG pipelines) to convert free-text clinical guidelines (ESMO, NCCN, OncoKB) into structured, queryable <strong>Knowledge Graphs</strong> adhering to the SPHN schema. This enables automated matching of patient characteristics&mdash;extracted from clinical notes via NLP&mdash;to relevant treatment recommendations. The structured representations are validated by clinicians through a human-in-the-loop strategy, mitigating hallucination risks. The system is designed for multi-cancer coverage: melanoma, NSCLC, ovarian cancer (adults) and leukemia, brain tumors, sarcoma (pediatric).</p>
+
+        <h4>WP2 &mdash; Data-Driven Predictive Models (Beyond Standard of Care)</h4>
+        <p>For patients beyond standard-of-care, we train <strong>multimodal ML models</strong> on retrospective EHR data (clinical, genetic, and multi-omics profiles) to predict personalized treatment response (progression-free survival) and side effects (adverse events). The approach integrates <strong>counterfactual causal ML</strong> for treatment selection, <strong>conformal prediction</strong> for uncertainty quantification, and <strong>SHAP</strong> for interpretability. Models are trained on patient cohorts from USZ, KISPI, and the Swiss Precision Oncology network (~4,000+ patients).</p>
+        <p>As a concrete downstream application of WP2, we developed a framework for <strong>individualized progression-free survival (PFS) estimation</strong> across successive lines of metastatic breast cancer therapy. See <a href="https://www.medrxiv.org/content/10.64898/2026.02.24.26346242v1" target="_blank" onclick="event.stopPropagation();">our preprint</a> for more details.</p>
+        <h4>WP3 &mdash; Interactive AI Dashboard</h4>
+        <p>Technologies from WP1 and WP2 are integrated into a clinician-facing <strong>interactive dashboard</strong> deployed for silent evaluation during actual tumor board meetings at USZ and KISPI. The dashboard presents personalized guideline matches, predicted treatment outcomes with uncertainty bounds, and explainable risk factors&mdash;enabling multidisciplinary teams to make informed, collaborative decisions at the point of care.</p>
+
+        <!-- <h4 style="color:#7c3aed;">Sub-project: Metastatic Breast Cancer PFS Prediction</h4>
+        <p>As a concrete downstream application of WP2, we developed a framework for <strong>individualized progression-free survival (PFS) estimation</strong> across successive lines of metastatic breast cancer therapy using real-world EHR data. Applied to 2,881 patients contributing 8,791 metastatic lines of therapy (mLoTs) from MSK-CHORD, a gradient-boosted survival model achieves <strong>AUROC 0.824 at 1 year</strong> (Antolini's C = 0.680). The model provides calibrated risk stratification across line numbers and tumor subtypes (HR+/HER2&minus;, TNBC, HER2+), relying on clinically plausible biological signals rather than surveillance artifacts, and is robust to missing modalities.</p>
+        <a href="https://www.medrxiv.org/content/10.64898/2026.02.24.26346242v1" class="paper-link" target="_blank" onclick="event.stopPropagation();">&#128196; Preprint (medRxiv)</a>
+        <a href="files/Projects/AI Tumor Board/Project Proposal.pdf" class="paper-link" target="_blank" onclick="event.stopPropagation();" style="margin-left:8px;">&#128196; Project Proposal</a> -->
+      </div>
+    </section>
+
+    <!-- ── Kidney Transplant ── -->
+    <section class="project-card" onclick="toggleCard(this)">
+      <div class="project-card-header">
+        <div style="display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; margin-bottom:8px;">
+          <span class="badge badge-published">Published &mdash; npj Digital Medicine</span>
+          <span class="badge badge-review">Under Review</span>
+        </div>
+        <h3 class="project-card-title">Machine Learning for Kidney Transplant Outcome Prediction</h3>
+      </div>
+      <div class="project-card-image">
+        <img src="files/Projects/Kidney transplant/pre_transplant_overview.png" alt="Pre-transplant prediction overview showing multi-center data, inputs, and outcomes">
+      </div>
+      <div class="expand-hint">&#9662; click to expand</div>
+      <div class="project-card-body">
+        <p>This project develops interpretable machine learning frameworks for predicting kidney transplant outcomes at multiple stages, using data from the <strong>Swiss Transplant Cohort Study (STCS)</strong> spanning 6 transplant centers and over 4,700 recipients across 13 years. The work is organized into two complementary sub-projects covering the full transplant journey.</p>
+
+        <h4>Sub-project 1: Pre-transplant Baseline Prediction</h4>
+        <p>Using multi-modal pre-transplant inputs &mdash; recipient demographics, donor characteristics, laboratory values, immunological matching (HLA mismatches, DSA, PIRCHE scores), and transplant logistics &mdash; we predict multiple post-transplant outcomes including patient survival, graft loss, graft function (eGFR), and rejection events (AMR, TCMR). The model operates on 51 features across recipient, donor, and static categories to provide pre-operative risk stratification.</p>
+        <a href="files/Projects/Kidney transplant/pre_transplant_prediction.pdf" class="paper-link" target="_blank" onclick="event.stopPropagation();">&#128196; Manuscript (under review)</a>
+
+        <h4>Sub-project 2: Post-transplant Longitudinal Prediction</h4>
+        <div class="sub-figure">
+          <img src="files/Projects/Kidney transplant/post_transplant_overview.png" alt="Post-transplant prediction framework: baseline model and follow-up model" style="max-width:700px;">
+          <figcaption>Two-stage framework: a baseline model predicts year-1 risk from pre-transplant data; a follow-up model dynamically updates predictions using evolving clinical data.</figcaption>
+        </div>
+        <p>Rather than relying solely on baseline factors, this sub-project introduces a <strong>two-stage framework</strong> that captures patients' evolving health status. A baseline model predicts year-1 outcomes from pre-transplant data, while a follow-up model incorporates annually updated clinical and laboratory measurements to predict year <em>t+1</em> risk. Using LightGBM with SHAP-based interpretability, the models achieve <strong>AUROC up to 0.896 for graft loss</strong> and <strong>0.797 for mortality</strong>, significantly outperforming static baseline-only approaches.</p>
+        <a href="https://nature.com/articles/s41746-025-02049-4" class="paper-link" target="_blank" onclick="event.stopPropagation();">&#128196; npj Digital Medicine (2025)</a>
+      </div>
+    </section>
+
+    <!-- ── PCR Bias ── -->
+    <section class="project-card" onclick="toggleCard(this)">
+      <div class="project-card-header">
+        <div style="text-align:center; margin-bottom:8px;"><span class="badge badge-published">Published &mdash; Nature Communications</span></div>
+        <h3 class="project-card-title">Deep Learning Uncovers Sequence-Specific Amplification Bias in Multi-Template PCR</h3>
+      </div>
+      <div class="project-card-image">
+        <img src="files/Projects/PCR bias/overview.png" alt="PCR amplification bias analysis workflow">
+      </div>
+      <div class="expand-hint">&#9662; click to expand</div>
+      <div class="project-card-body">
+        <p>Multi-template PCR is fundamental to many sequencing protocols, yet it introduces sequence-specific amplification biases that skew amplicon abundance. In this work, we trained 1D convolutional neural networks on synthetic DNA pools to learn per-template PCR amplification efficiency, achieving AUROC/AUPRC of up to 0.88/0.44 &mdash; greatly outperforming baseline models relying on GC content alone.</p>
+        <p>We developed <strong>CluMo</strong>, a novel motif-discovery framework that extracts interpretable sequence motifs from the trained deep learning models. CluMo revealed that specific CGTG-based motifs near adapter binding sites cause inhibition through <strong>adapter-template self-priming</strong> &mdash; a mechanism previously disregarded in PCR. This finding was validated experimentally using degenerate primers that suppressed self-priming and restored amplification efficiency.</p>
+        <a href="files/Papers/PCRbias.pdf" class="paper-link" target="_blank" onclick="event.stopPropagation();">&#128196; PDF</a>
+      </div>
+    </section>
+
+    <!-- ── Long Covid ── -->
+    <section class="project-card" onclick="toggleCard(this)">
+      <div class="project-card-header">
+        <div style="text-align:center; margin-bottom:8px;"><span class="badge badge-published">Published &mdash; Science</span></div>
+        <h3 class="project-card-title">Persistent Complement Dysregulation with Signs of Thromboinflammation in Active Long Covid</h3>
+      </div>
+      <div class="project-card-image">
+        <img src="files/Projects/Long COVID/overview.jpg" alt="Long Covid proteomics analysis overview">
+      </div>
+      <div class="expand-hint">&#9662; click to expand</div>
+      <div class="project-card-body">
+        <p>We analyzed the serum proteome of COVID-19 patients up to twelve months post-infection, revealing persistent complement system activation and thromboinflammation. Terminal complement complex formation was altered, with increased C5bC6 complex and decreased C7 incorporation. A prominent thromboinflammatory response, marked by elevated von Willebrand factor and diminished antithrombin III levels, was linked to clinical persistence of Long Covid symptoms.</p>
+        <p>Machine learning techniques were applied to analyze over <strong>6,500 protein expression levels</strong>, enabling identification of key biomarkers and mechanistic insights. This approach provided a robust basis for developing targeted diagnostics and therapeutic interventions for the ongoing immune and coagulation abnormalities in Long Covid.</p>
+        <a href="files/Papers/LongCOVID.pdf" class="paper-link" target="_blank" onclick="event.stopPropagation();">&#128196; PDF</a>
+      </div>
+    </section>
+
+    <!-- ── Genetic Interactions ── -->
+    <section class="project-card" onclick="toggleCard(this)">
+      <div class="project-card-header">
+        <div style="text-align:center; margin-bottom:8px;"><span class="badge badge-published">Published &mdash; Communications Biology</span></div>
+        <h3 class="project-card-title">Detecting Genetic Interactions with Visible Neural Networks</h3>
+      </div>
+      <div class="project-card-image">
+        <img src="files/Projects/NN interactions/overview.png" alt="Visible neural networks for genetic interactions">
+      </div>
+      <div class="expand-hint">&#9662; click to expand</div>
+      <div class="project-card-body">
+        <p>This work investigates detecting non-linear genetic interactions among SNPs, genes, and pathways using <strong>visible neural networks</strong> that incorporate prior biological knowledge (gene and pathway annotations) to create sparse, interpretable architectures. We adapted and accelerated multiple post-hoc interpretation methods &mdash; including PathExplain, RLIPP, NID, and DFIM &mdash; and benchmarked them on simulated data.</p>
+        <p>Applied to a genome-wide case-control study of <strong>inflammatory bowel disease</strong>, the methods showed high consistency in identifying epistasis pair candidates, with follow-up association testing revealing seven significant epistasis pairs. This demonstrates the power of biologically-informed neural networks for uncovering complex genetic interactions.</p>
+        <a href="files/Papers/NN interactions.pdf" class="paper-link" target="_blank" onclick="event.stopPropagation();">&#128196; PDF</a>
+      </div>
+    </section>
+
+    <!-- ── AKI Prediction ── -->
+    <section class="project-card" onclick="toggleCard(this)">
+      <div class="project-card-header">
+        <div style="text-align:center; margin-bottom:8px;"><span class="badge badge-published">Published &mdash; OUP Bioinformatics</span></div>
+        <h3 class="project-card-title">An Empirical Study on KDIGO-Defined Acute Kidney Injury Prediction in the ICU</h3>
+      </div>
+      <div class="project-card-image">
+        <img src="files/Projects/AKI/overview.png" alt="AKI prediction in ICU">
+      </div>
+      <div class="expand-hint">&#9662; click to expand</div>
+      <div class="project-card-body">
+        <p>Traditional AKI prediction models relying solely on creatinine levels delay detection due to the lagging nature of serum creatinine changes. By integrating both creatinine and urine output into the <strong>KDIGO definition</strong>, we developed a gradient-boosted decision tree (GBDT) model enhanced by a novel time-stacking method that significantly outperforms existing LSTM models in precision and reduced false alarms.</p>
+        <p>The GBDT model handles diverse ICU data across different systems and demographics, performing robustly regardless of patient cohort specifics. This work improves predictive accuracy for timely AKI intervention and contributes to better resource allocation and patient management in ICUs.</p>
+        <a href="files/Papers/AKI.pdf" class="paper-link" target="_blank" onclick="event.stopPropagation();">&#128196; PDF</a>
+      </div>
+    </section>
+
+    <!-- ── Joint MDS ── -->
+    <section class="project-card" onclick="toggleCard(this)">
+      <div class="project-card-header">
+        <div style="text-align:center; margin-bottom:8px;"><span class="badge badge-published">Published &mdash; ICLR 2023</span></div>
+        <h3 class="project-card-title">Unsupervised Manifold Alignment with Joint Multidimensional Scaling</h3>
+      </div>
+      <div class="project-card-image">
+        <img src="files/Projects/Joint MDS/overview.png" alt="Joint MDS overview">
+      </div>
+      <div class="expand-hint">&#9662; click to expand</div>
+      <div class="project-card-body">
+        <p>We introduced <strong>Joint Multidimensional Scaling (Joint MDS)</strong>, a method to map data from two distinct domains into a common low-dimensional Euclidean space without prior knowledge of correspondences. By integrating MDS with Wasserstein Procrustes analysis into a joint optimization framework, the approach simultaneously embeds data and learns instance correspondences based solely on intra-dataset dissimilarities.</p>
+        <p>Joint MDS proves effective across joint dataset visualization, unsupervised heterogeneous domain adaptation, graph matching, and protein structure alignment. Its unsupervised nature and reliance on intra-dataset dissimilarities make it a powerful tool for complex multi-domain data integration in bioinformatics and machine learning.</p>
+        <a href="files/Papers/JointMDS.pdf" class="paper-link" target="_blank" onclick="event.stopPropagation();">&#128196; PDF</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">&copy; 2026 Bowen Fan</div>
+  </footer>
+
+  <script>
+  function toggleCard(card) {
+    const body = card.querySelector('.project-card-body');
+    const hint = card.querySelector('.expand-hint');
+    const isOpen = body.classList.contains('open');
+    body.classList.toggle('open');
+    if (hint) hint.textContent = isOpen ? '\u25BE click to expand' : '\u25B4 click to collapse';
+  }
+  </script>
+</body>
+</html>
